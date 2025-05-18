@@ -1,0 +1,23 @@
+// app/products/page.tsx
+
+'use client';
+
+import React from 'react';
+import ProductListSearch from '../components/ProductListSearch';
+import PageHeader from '../components/PageHeader';
+import styles from './SearchPage.module.css';
+
+const ProductsPage = () => {
+  return (
+    <main className={styles.container}>
+      <PageHeader
+        title="Catálogo de Produtos"
+        subtitle="Explore nossa coleção completa de produtos disponíveis."
+      />
+
+      <ProductListSearch enableFilterUI enableBuyNow title="Catálogo de Produtos" />
+    </main>
+  );
+};
+
+export default ProductsPage;
