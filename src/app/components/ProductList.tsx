@@ -2,25 +2,16 @@
 
 'use client';
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Product } from "../types/product";
 import ProductCard from "./ProductCard";
-import { useProduct } from "../context/ProductContext";
 import styles from "./ProductList.module.css";
 
 interface ProductListProps {
-  overrideProducts?: Product[];
+  products: Product[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ overrideProducts = [] }) => {
-  const { setProducts, products } = useProduct();
-
-  useEffect(() => {
-    if (overrideProducts.length > 0) {
-      setProducts(overrideProducts);
-    }
-  }, [overrideProducts]);
-
+const ProductList: React.FC<ProductListProps> = ({ products }) => {
   if (!products.length) {
     return <p className={styles.noProductsMessage}>Nenhum produto encontrado.</p>;
   }

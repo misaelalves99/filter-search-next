@@ -2,7 +2,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Product } from '../types/product';
 import styles from './SearchFilter.module.css';
 
@@ -26,7 +26,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(1000);
 
-  const filterProducts = () => {
+  const filterProducts = useCallback(() => {
     let filtered = products;
 
     if (searchTerm) {
@@ -49,11 +49,11 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
 
     if (onCategoryChange) onCategoryChange(selectedCategory);
     if (onPriceRangeChange) onPriceRangeChange(selectedCategory, minPrice, maxPrice);
-  };
+  }, [products, searchTerm, selectedCategory, minPrice, maxPrice, onSearch, onCategoryChange, onPriceRangeChange]);
 
   useEffect(() => {
     filterProducts();
-  }, [searchTerm, selectedCategory, minPrice, maxPrice]);
+  }, [filterProducts]);
 
   return (
     <div className={styles.searchFilterContainer}>
