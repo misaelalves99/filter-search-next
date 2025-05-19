@@ -27,7 +27,3 @@ const CategoryList: React.FC<CategoryListProps> = ({ categories, onCategorySelec
 };
 
 export default CategoryList;
-
-// 03-Arrays -
-// 05-Formulários e Eventos -
-// 07-Props e Router -

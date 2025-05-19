@@ -44,7 +44,6 @@ const ProductList: React.FC<ProductListFilterProps> = ({
     fetchData();
   }, [setProducts]);
 
-  // 👇 Nova função para tratar mudança de categoria via CategoryList
   const handleCategoryChange = (selectedCategory: string) => {
     setCategoryFilter(selectedCategory === 'todos' ? '' : selectedCategory);
   };

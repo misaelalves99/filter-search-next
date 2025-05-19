@@ -11,7 +11,6 @@ interface SearchFormProps {
 const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
-  // 05-Formulários e Eventos - Manipulação de mudança no campo de pesquisa
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
   };
@@ -40,7 +39,3 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
 };
 
 export default SearchForm;
-
-// 05-Formulários e Eventos -
-// 06-Hooks -
-// 07-Props e Router -

@@ -54,8 +54,3 @@ const SelectFilter: React.FC<SelectFilterProps> = ({ products, categories, onSea
 };
 
 export default SelectFilter;
-
-
-// 05-Formulários e Eventos -
-// 06-Hooks -
-// 07-Props e Router -

@@ -3,7 +3,6 @@
 import { Product } from '@/app/types/product';
 
 export async function getProducts(): Promise<Product[]> {
-  // ✅ Retorna diretamente os dados estáticos (simulando fetch do banco)
   return [
     {
       id: 1,

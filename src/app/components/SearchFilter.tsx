@@ -109,7 +109,3 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
 };
 
 export default SearchFilter;
-
-// 05-Formulários e Eventos -
-// 06-Hooks -
-// 07-Props e Router -

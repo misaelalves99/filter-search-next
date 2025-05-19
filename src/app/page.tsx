@@ -50,10 +50,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-// 01-Estruturas e Tratamento -
-// 03-Arrays -
-// 05-Formulários e Eventos -
-// 06-Hooks -
-// 08-Api -
-// 09-Renderização Condicional -

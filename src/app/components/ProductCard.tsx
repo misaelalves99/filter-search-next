@@ -5,7 +5,7 @@
 import { FaCartPlus } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // ✅ IMPORTAÇÃO AQUI
+import { useRouter } from "next/navigation";
 import { Product } from "../types/product";
 import styles from "./ProductCard.module.css";
 
@@ -15,10 +15,10 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow }) => {
-  const router = useRouter(); // ✅ INSTANCIAR O ROUTER
+  const router = useRouter();
 
   const goToProduct = () => {
-    router.push(`/products/${product.id}`); // ✅ NAVEGAR PARA /products/[id]
+    router.push(`/products/${product.id}`);
   };
 
   return (
@@ -58,11 +58,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow }) => {
 };
 
 export default ProductCard;
-
-
-// 01-Estruturas e Tratamento -
-// 02-Funções e Métodos -
-// 03-Arrays -
-// 05-Formulários e Eventos -
-// 06-Hooks -
-// 07-Props e Router -
